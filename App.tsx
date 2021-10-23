@@ -1,10 +1,17 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import Navigation from './src/navigation/Navigation';
+import {NavigationContainer} from '@react-navigation/native';
 
 function App() {
-  return <SafeAreaView></SafeAreaView>;
+    return (
+        <SafeAreaView style={{flex: 1}} edges={['left', 'right']}>
+            <NavigationContainer>
+                <Navigation />
+            </NavigationContainer>
+        </SafeAreaView>
+    );
 }
-
-const styles = StyleSheet.create({});
 
 export default App;
