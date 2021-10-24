@@ -36,14 +36,14 @@ function TrackCard({track, navigation, artistId, albumId}: TrackCardProps) {
 
 const styles = StyleSheet.create({
     container: {
-        width: wp('42.5%'),
+        width: wp('26.5%'),
         alignSelf: 'center',
         borderRadius: wp('3%'),
         marginBottom: wp('4%'),
     },
     image: {
-        width: wp('42.5%'),
-        height: wp('42.5%'),
+        width: wp('26.5%'),
+        height: wp('25.5%'),
         alignItems: 'center',
         justifyContent: 'center',
         borderTopLeftRadius: wp('3%'),
@@ -54,9 +54,9 @@ const styles = StyleSheet.create({
         paddingVertical: wp('3%'),
     },
     cardTitle: {
-        fontSize: wp('3%'),
+        fontSize: wp('2.5%'),
         maxWidth: wp('40%'),
-        width: wp('40%'),
+        width: wp('25.8%'),
     },
 });
 

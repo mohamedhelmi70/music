@@ -91,11 +91,16 @@ function ArtistScreen({route, navigation}: ArtistScreenProps) {
                             <Text style={[styles.heading, {marginEnd: wp('1%')}]}>{artist?.artist}</Text>
                         </View>
                     </View>
+                    <View style={styles.listHeader}>
+                        <Text style={{fontSize: wp('4.3%')}} font="Roboto-Bold" weight="700">
+                            Albums
+                        </Text>
+                    </View>
                     <FlatList
                         numColumns={1}
                         data={albums}
                         horizontal={true}
-                        style={{width: wp('100%'), paddingTop: wp('5%'), paddingStart: wp('5%')}}
+                        style={{width: wp('100%'), paddingTop: wp('3%'), paddingStart: wp('5%')}}
                         contentContainerStyle={{paddingEnd: wp('7%')}}
                         keyExtractor={(item) => item?.id_album?.toString()}
                         showsHorizontalScrollIndicator={false}
@@ -108,21 +113,28 @@ function ArtistScreen({route, navigation}: ArtistScreenProps) {
             }
             renderItem={() => <View />}
             ListFooterComponent={
-                <FlatList
-                    numColumns={2}
-                    data={tracks}
-                    showsVerticalScrollIndicator={false}
-                    style={{width: wp('100%'), paddingTop: wp('5%')}}
-                    contentContainerStyle={{paddingEnd: wp('7%')}}
-                    renderItem={({item}) => (
-                        <TrackCard
-                            track={item}
-                            navigation={navigation}
-                            albumId={selectedAlbum}
-                            artistId={route.params.artistId}
-                        />
-                    )}
-                />
+                <>
+                    <View style={styles.listHeader}>
+                        <Text style={{fontSize: wp('4.3%')}} font="Roboto-Bold" weight="700">
+                            Tracks
+                        </Text>
+                    </View>
+                    <FlatList
+                        numColumns={3}
+                        data={tracks}
+                        showsVerticalScrollIndicator={false}
+                        style={{width: wp('100%'), paddingTop: wp('3%')}}
+                        contentContainerStyle={{paddingEnd: wp('7%')}}
+                        renderItem={({item}) => (
+                            <TrackCard
+                                track={item}
+                                navigation={navigation}
+                                albumId={selectedAlbum}
+                                artistId={route.params.artistId}
+                            />
+                        )}
+                    />
+                </>
             }
         />
     );
@@ -156,7 +168,11 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         maxWidth: wp('80%'),
         alignSelf: 'flex-start',
-        color: colors.light.text,
+        color: colors.light.dark,
+    },
+    listHeader: {
+        marginTop: wp('3%'),
+        paddingHorizontal: wp('5%'),
     },
 });
 
