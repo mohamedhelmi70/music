@@ -47,14 +47,7 @@ function BottomTabBar({state, descriptors, navigation}: any) {
                         key={index}
                         style={styles.tab}>
                         <Icon name={ICONS[index]} color={isFocused ? colors.light.primary : '#A2A2A2'} size={25} />
-                        <Text
-                            style={{
-                                color: isFocused ? colors.light.primary : '#848484',
-                                textAlign: 'center',
-                                fontSize: 9,
-                                fontWeight: isIOS ? '600' : undefined,
-                                fontFamily: isIOS ? 'Roboto' : 'Roboto-Medium',
-                            }}>
+                        <Text style={{...styles.text, color: isFocused ? colors.light.primary : '#848484'}}>
                             {STRINGS_EN[index]}
                         </Text>
                     </Pressable>
@@ -81,5 +74,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10,
+    },
+    text: {
+        textAlign: 'center',
+        fontSize: 9,
+        fontWeight: isIOS ? '600' : undefined,
+        fontFamily: isIOS ? 'Roboto' : 'Roboto-Medium',
     },
 });
