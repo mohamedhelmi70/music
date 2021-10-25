@@ -8,12 +8,14 @@ import {Text, View} from '../../components/Themed';
 
 interface ArtistCardProps {
     artist: Artist;
-    navigation: StackNavigationProp<AppParamList, 'Artists'>;
+    navigation?: StackNavigationProp<AppParamList, 'Artists'>;
 }
 
 function AlbumCard({artist, navigation}: ArtistCardProps) {
     return (
-        <Pressable onPress={() => navigation.navigate('Artist', {artistId: artist.id_artist})} style={styles.container}>
+        <Pressable
+            onPress={() => navigation?.navigate('Artist', {artistId: artist.id_artist})}
+            style={styles.container}>
             <View>{Boolean(artist.cover) && <FastImage url={artist.cover} style={styles.image} />}</View>
             <View style={styles.cardRight}>
                 <Text style={styles.cardTitle} weight="700" numberOfLines={1} lightColor="#334443">

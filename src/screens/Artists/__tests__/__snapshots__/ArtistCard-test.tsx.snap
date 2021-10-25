@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArtistCard /> Renders ArtistCard correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderRadius": 15,
+      "flex": 1,
+      "marginBottom": 37.5,
+      "width": 337.5,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F7F7F9",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 150,
+            "height": 300,
+            "marginBottom": 15,
+            "width": 300,
+          },
+        ]
+      }
+    >
+      <FastImageView
+        resizeMode="cover"
+        source={
+          Object {
+            "cache": "immutable",
+            "headers": Object {
+              "Authorization": "4f298a53e552283bee957836a529baec",
+            },
+            "priority": "normal",
+            "uri": "https://artist.png",
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F7F7F9",
+        },
+        Object {
+          "marginLeft": 30,
+        },
+      ]
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#334443",
+            "fontFamily": "Roboto",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+          Object {
+            "fontSize": 22.5,
+            "maxWidth": 300,
+          },
+        ]
+      }
+    >
+      artist name
+    </Text>
+  </View>
+</View>
+`;
