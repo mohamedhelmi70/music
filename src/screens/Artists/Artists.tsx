@@ -106,6 +106,7 @@ function Artists({navigation}: ArtistsProps) {
                 numColumns={2}
                 data={artists}
                 style={{width: wp('100%'), paddingHorizontal: wp('5%')}}
+                contentContainerStyle={{paddingTop: wp('5%')}}
                 onEndReachedThreshold={0.2}
                 onRefresh={search == '' ? () => {} : () => setPage(1)}
                 onEndReached={search == '' ? () => {} : handleOnEndReached}
@@ -143,7 +144,7 @@ const styles = StyleSheet.create({
     },
     header: {
         width: wp('100%'),
-        paddingVertical: wp('4%'),
+        paddingBottom: wp('4%'),
         paddingHorizontal: wp('5% '),
     },
     inputContainer: {

@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     },
     header: {
         width: wp('100%'),
-        paddingVertical: wp('4%'),
+        paddingBottom: wp('4%'),
         paddingHorizontal: wp('5% '),
     },
     inputContainer: {
