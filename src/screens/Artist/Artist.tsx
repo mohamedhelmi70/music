@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, FlatList, ActivityIndicator} from 'react-native';
 import {AppParamList, Artist, Album, Track} from '../../../types';
-import {BackButton, Container} from '../../components';
-import Image from '../../components/FastImage';
+import {BackButton, Container, FastImage} from '../../components';
+
 import {Text} from '../../components/Themed';
 import {colors, isIOS, wp} from '../../constants';
 import axiosInstance from '../../constants/axios';
@@ -84,7 +84,7 @@ function ArtistScreen({route, navigation}: ArtistScreenProps) {
                         </View>
                         {Boolean(artist) && Boolean(artist?.cover) && (
                             <View style={styles.avatarContainer}>
-                                <Image url={artist.cover} style={styles.avatar} />
+                                <FastImage url={artist.cover} style={styles.avatar} />
                             </View>
                         )}
                         <View style={{paddingHorizontal: wp('5%')}}>

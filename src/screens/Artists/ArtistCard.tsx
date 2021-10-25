@@ -3,7 +3,7 @@ import {StyleSheet, Pressable} from 'react-native';
 import {Artist, AppParamList} from '../../../types';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {wp} from '../../constants';
-import FastImage from '../../components/FastImage';
+import FastImage from '../../components/Theme/FastImage';
 import {Text, View} from '../../components/Themed';
 
 interface ArtistCardProps {

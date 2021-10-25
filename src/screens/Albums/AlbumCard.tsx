@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Pressable} from 'react-native';
 import {Album} from '../../../types';
 import {wp} from '../../constants';
-import FastImage from '../../components/FastImage';
+import FastImage from '../../components/Theme/FastImage';
 import {Text, View} from '../../components/Themed';
 
 interface AlbumCardProps {
