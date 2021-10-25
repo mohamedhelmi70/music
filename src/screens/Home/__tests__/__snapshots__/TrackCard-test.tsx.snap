@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrackCard /> Renders TrackCard correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFF",
+        },
+        Object {
+          "alignSelf": "center",
+          "borderRadius": 22.5,
+          "flex": 1,
+          "flexDirection": "row",
+          "marginBottom": 30,
+          "width": 675,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#C1C6C7",
+          },
+          Object {
+            "alignItems": "center",
+            "borderBottomLeftRadius": 22.5,
+            "borderTopLeftRadius": 22.5,
+            "height": 187.5,
+            "justifyContent": "center",
+            "width": 187.5,
+          },
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 30,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Ionicons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFF",
+          },
+          Object {
+            "marginLeft": 30,
+            "paddingVertical": 22.5,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#334443",
+              "fontFamily": "Roboto",
+              "fontWeight": "700",
+              "textAlign": "left",
+            },
+            Object {
+              "fontSize": 27,
+              "maxWidth": 300,
+              "width": 300,
+            },
+          ]
+        }
+      >
+        track name
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#8B899F",
+              "fontFamily": "Roboto",
+              "fontWeight": "500",
+              "textAlign": "left",
+            },
+            Object {
+              "fontSize": 22.5,
+              "marginTop": 11.5,
+              "maxWidth": 300,
+              "width": 300,
+            },
+          ]
+        }
+      >
+        artist name
+      </Text>
+    </View>
+  </View>
+</View>
+`;

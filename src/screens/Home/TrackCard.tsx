@@ -10,14 +10,14 @@ interface TrackCardProps {
     track: Track;
     albumId: number;
     artistId: number;
-    navigation: StackNavigationProp<AppParamList, 'Home'>;
+    navigation?: StackNavigationProp<AppParamList, 'Home'>;
 }
 
 function TrackCard({track, navigation, albumId, artistId}: TrackCardProps) {
     return (
         <Pressable
             onPress={() =>
-                navigation.navigate('Track', {trackId: track.id_track, title: track.track, albumId, artistId})
+                navigation?.navigate('Track', {trackId: track.id_track, title: track.track, albumId, artistId})
             }>
             <View lightColor="#FFF" style={styles.container}>
                 <View lightColor={colors.light.gray} style={styles.image}>
