@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlbumCard /> Renders AlbumCard correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderRadius": 15,
+      "flex": 1,
+      "marginBottom": 37.5,
+      "width": 187.5,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F7F7F9",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 22.5,
+            "height": 187.5,
+            "marginBottom": 15,
+            "width": 187.5,
+          },
+        ]
+      }
+    >
+      <FastImageView
+        resizeMode="cover"
+        source={
+          Object {
+            "cache": "immutable",
+            "headers": Object {
+              "Authorization": "4f298a53e552283bee957836a529baec",
+            },
+            "priority": "normal",
+            "uri": "https://image.png",
+          }
+        }
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F7F7F9",
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#03873B",
+            "fontFamily": "Roboto",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+          Object {
+            "fontSize": 24,
+            "maxWidth": 150,
+            "width": 142.5,
+          },
+        ]
+      }
+    >
+      album name
+    </Text>
+  </View>
+</View>
+`;

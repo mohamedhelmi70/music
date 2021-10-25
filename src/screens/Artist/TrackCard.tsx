@@ -10,7 +10,7 @@ interface TrackCardProps {
     track: Track;
     albumId: number;
     artistId: number;
-    navigation: StackNavigationProp<AppParamList, 'Artist'>;
+    navigation?: StackNavigationProp<AppParamList, 'Artist'>;
 }
 
 function TrackCard({track, navigation, artistId, albumId}: TrackCardProps) {
@@ -18,7 +18,7 @@ function TrackCard({track, navigation, artistId, albumId}: TrackCardProps) {
         <Pressable
             style={{marginStart: wp('5%')}}
             onPress={() =>
-                navigation.navigate('Track', {trackId: track.id_track, title: track.track, albumId, artistId})
+                navigation?.navigate('Track', {trackId: track.id_track, title: track.track, albumId, artistId})
             }>
             <View style={styles.container}>
                 <View lightColor={colors.light.gray} style={styles.image}>
