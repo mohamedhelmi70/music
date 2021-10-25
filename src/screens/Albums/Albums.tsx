@@ -42,6 +42,8 @@ function Albums() {
         );
     }
 
+    const albumsFiltered: Album[] = albums.filter((album) => album.album.includes(search));
+
     return (
         <Container style={styles.container}>
             <View lightColor={colors.light.background} style={styles.header}>
@@ -63,25 +65,26 @@ function Albums() {
                     {search !== '' && <Icon onPress={() => handleSearch('')} name="close" size={20} color={'#F00'} />}
                 </View>
             </View>
-            <FlatList
-                numColumns={2}
-                data={albums.filter((album) => album.album.includes(search))}
-                style={{width: wp('100%'), paddingHorizontal: wp('5%')}}
-                keyExtractor={(item) => item?.id_album?.toString()}
-                showsVerticalScrollIndicator={false}
-                ListEmptyComponent={() => (
-                    <Container>
-                        <Text
-                            style={{marginTop: wp('20%')}}
-                            font="Roboto-Medium"
-                            weight="500"
-                            lightColor={colors.light.dark}>
-                            There are no albums for : "{search}"
-                        </Text>
-                    </Container>
-                )}
-                renderItem={({item}) => <AlbumCard album={item} />}
-            />
+            {albumsFiltered?.length > 0 ? (
+                <FlatList
+                    numColumns={2}
+                    data={albumsFiltered}
+                    style={{width: wp('100%'), paddingHorizontal: wp('5%')}}
+                    keyExtractor={(item) => item?.id_album?.toString()}
+                    showsVerticalScrollIndicator={false}
+                    renderItem={({item}) => <AlbumCard album={item} />}
+                />
+            ) : (
+                <Container>
+                    <Text
+                        style={{marginTop: wp('20%')}}
+                        font="Roboto-Medium"
+                        weight="500"
+                        lightColor={colors.light.dark}>
+                        There are no albums for : "{search}"
+                    </Text>
+                </Container>
+            )}
         </Container>
     );
 }

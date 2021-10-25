@@ -50,6 +50,8 @@ function Home({navigation}: HomeProps) {
         );
     }
 
+    const tracksFiltered: Track[] = tracks.filter((track) => track.track.includes(search));
+
     return (
         <Container style={styles.container}>
             <View lightColor={colors.light.background} style={styles.header}>
@@ -71,24 +73,25 @@ function Home({navigation}: HomeProps) {
                     {search !== '' && <Icon onPress={() => handleSearch('')} name="close" size={20} color={'#F00'} />}
                 </View>
             </View>
-            <FlatList
-                data={tracks.filter((track) => track.track.includes(search))}
-                showsVerticalScrollIndicator={false}
-                renderItem={({item}) => (
-                    <TrackCard track={item} navigation={navigation} albumId={albumId} artistId={artistId} />
-                )}
-                ListEmptyComponent={
-                    <Container>
-                        <Text
-                            style={{marginTop: wp('20%')}}
-                            font="Roboto-Medium"
-                            weight="500"
-                            lightColor={colors.light.dark}>
-                            There are no tracks for : "{search}"
-                        </Text>
-                    </Container>
-                }
-            />
+            {tracksFiltered?.length > 0 ? (
+                <FlatList
+                    data={tracksFiltered}
+                    showsVerticalScrollIndicator={false}
+                    renderItem={({item}) => (
+                        <TrackCard track={item} navigation={navigation} albumId={albumId} artistId={artistId} />
+                    )}
+                />
+            ) : (
+                <Container>
+                    <Text
+                        style={{marginTop: wp('20%')}}
+                        font="Roboto-Medium"
+                        weight="500"
+                        lightColor={colors.light.dark}>
+                        There are no tracks for : "{search}"
+                    </Text>
+                </Container>
+            )}
         </Container>
     );
 }
