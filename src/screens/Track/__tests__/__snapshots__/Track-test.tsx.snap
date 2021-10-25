@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Track /> Renders Track correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F7F7F9",
+      },
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F7F7F9",
+          "flex": 1,
+          "justifyContent": "center",
+          "width": "100%",
+        },
+        undefined,
+      ],
+    ]
+  }
+>
+  <ActivityIndicator
+    color="#03873B"
+    size="small"
+  />
+</View>
+`;
