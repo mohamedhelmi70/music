@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Pressable} from 'react-native';
+import {StyleSheet, View as DefaultView} from 'react-native';
 import {Album} from '../../../types';
 import {wp} from '../../constants';
 import FastImage from '../../components/Theme/FastImage';
@@ -11,14 +11,14 @@ interface AlbumCardProps {
 
 function AlbumCard({album}: AlbumCardProps) {
     return (
-        <Pressable style={styles.container}>
+        <DefaultView style={styles.container}>
             <View>{Boolean(album.cover) && <FastImage url={album.cover} style={styles.image} />}</View>
             <View style={styles.cardRight}>
                 <Text style={styles.cardTitle} weight="700" numberOfLines={1} lightColor="#334443">
                     {album.album}
                 </Text>
             </View>
-        </Pressable>
+        </DefaultView>
     );
 }
 
