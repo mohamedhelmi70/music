@@ -4,7 +4,7 @@ import FastImage from 'react-native-fast-image';
 
 interface FastImageProps {
     url: string;
-    style: StyleProp<ImageStyle> | undefined;
+    style?: StyleProp<ImageStyle>;
 }
 
 function Image({url, style}: FastImageProps) {
@@ -16,7 +16,7 @@ function Image({url, style}: FastImageProps) {
                 priority: FastImage.priority.normal,
                 cache: FastImage.cacheControl.immutable,
             }}
-            style={style}
+            style={{...style}}
             resizeMode={FastImage.resizeMode.cover}
         />
     );
